@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -92,8 +93,18 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+        
+        'mongodb' => [
+            "driver" => "mongodb",
+            "dsn" => "mongodb+srv://AliHussein:Polo123$@elearning.clzuhnc.mongodb.net/elearning?retryWrites=true&w=majority",
+            "database" => "elearningdb",
+            "options" => [
+              "database" => "elearningdb",
+              "ssl" => true,
+            ],
+          ],
 
-    ],
+],
 
     /*
     |--------------------------------------------------------------------------
