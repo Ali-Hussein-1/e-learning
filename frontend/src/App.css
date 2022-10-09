@@ -21,3 +21,28 @@
   
 }
 
+input, label {
+  display:block;
+}
+
+
+.input{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label{
+  margin-bottom: 10px;
+  align-items:flex-start;
+}
+
+.inputs{
+  width: 80%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
