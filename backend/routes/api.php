@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\AssignmentController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
@@ -16,7 +17,7 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::group(["prefix"=> "v1"], function(){
-    Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncements"]);
+    Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncement"]);
     Route::get("/viewanncmnt", [AnnouncementController::class, "ViewAnnouncements"]);
 });
 

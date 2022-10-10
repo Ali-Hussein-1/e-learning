@@ -7,7 +7,7 @@ use App\Models\Announcement;
 
 class AnnouncementController extends Controller
 {
-    public function addAnnouncements(Request $request)
+    public function addAnnouncement(Request $request)
     {
         $anncmnt = new Announcement;
 
