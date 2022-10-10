@@ -17,4 +17,16 @@ class AnnouncementController extends Controller
  
         return response()->json(["result" => "ok"], 201);
     }
+
+    public function viewAnnouncements()
+    {
+        return response()->json(Announcement::all(), 200);
+    }
+
+    public function deleteAnnouncements($id)
+    {
+        Announcement::where('_id', '=', $id)->delete();
+        return response()->json(["result" => "ok"], 201);
+    }
+
 }
