@@ -2,6 +2,7 @@ import "./App.css";
 import SignIn from "./components/SignIn";
 import Button from "./components/Button";
 import SidePanel from "./components/SidePanel";
+import Box from "./components/Box";
 
 
 function App() {

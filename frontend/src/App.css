@@ -72,6 +72,18 @@ label{
   box-sizing: border-box;
 }
 
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .sidepanel{
   height: 100vh;
   width: 25vw;
@@ -97,5 +109,16 @@ label{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 
+.box{
+  height: 70vh;
+  width: 70vw;
+  margin-top: 30vh;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
