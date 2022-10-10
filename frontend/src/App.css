@@ -77,6 +77,21 @@ label{
   width: 25vw;
   background-color: lightskyblue;
   text-align: center;
+
+}
+
+.sidepanel h1{
+  padding-top: 20px;
+  padding-bottom: 50px;
   font-weight: bold;
   font-size: 30px;
+}
+
+.sidepanelcards{
+  height: 20vh;
+  width: 25vw;
+  background-color: blue;
+  /* text-align: center; */
+  font-size: 30px;
+  border: 2px solid black;
 }
