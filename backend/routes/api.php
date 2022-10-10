@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AnnouncementController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
@@ -14,22 +15,14 @@ Route::controller(AuthController::class)->group(function () {
 
 });
 
+Route::group(["prefix"=> "v1"], function(){
+    Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncements"]);
+});
 
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+// Route::get('/post/{slug}', [PostController::class, 'show']);
 
-Route::get('/post/{slug}', [PostController::class, 'show']);
-
-Route::resource('posts', PostController::class)->only([
-    'destroy', 'show', 'store', 'update'
- ]);
+// Route::resource('posts', PostController::class)->only([
+//     'destroy', 'show', 'store', 'update'
+//  ]);
 
