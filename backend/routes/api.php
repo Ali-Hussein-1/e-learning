@@ -17,6 +17,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::group(["prefix"=> "v1"], function(){
     Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncements"]);
+    Route::get("/viewanncmnt", [AnnouncementController::class, "ViewAnnouncements"]);
 });
 
 
