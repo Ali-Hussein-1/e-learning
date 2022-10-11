@@ -12,11 +12,16 @@ const SidePanel = () => {
           <SidePanelCards data={"Students"} />
           <SidePanelCards data={"Courses"} />
         </div>
-        <div className="box container">
-          <div>
-            <Button />
+        <div className="box-container">
+          <div className="btn-container">
+            <Button text={"Add"} />
+            <Button text={"Edit"} />
           </div>
-          <div className="box"></div>;
+          <div className="info-container">
+            <div>name</div>
+            <div>email</div>
+            <div>password</div>
+          </div>
         </div>
       </div>
     </>

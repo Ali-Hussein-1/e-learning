@@ -8,10 +8,10 @@ import Box from "./components/Box";
 function App() {
   return (
     <>
-      {/* {" "}
+      {" "}
       <div className="App">
         <SignIn/>
-      </div> */}
+      </div>
       <div className="App">
         <SidePanel/>
       </div>

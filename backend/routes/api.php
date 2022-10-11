@@ -11,7 +11,7 @@ use App\Http\Controllers\UserController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
-    Route::post('register', 'register');
+    
     Route::post('logout', 'logout');
     Route::post('refresh', 'refresh');
     Route::get('me', 'me');
@@ -20,12 +20,12 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::group(["prefix"=> "v1"], function(){
+    Route::post('/addinstructor',[AuthController::class,'addInstructor']);
     Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncement"]);
     Route::get("/viewanncmnt", [AnnouncementController::class, "ViewAnnouncements"]);
     Route::post("/addassignment", [AssignmentController::class, "AddAssignment"]);
     Route::get("/viewassignments", [AssignmentController::class, "viewAssignments"]);
     Route::post("/addcourse", [CourseController::class, "AddCourse"]);
-    Route::post("/register", [UserController::class, "register"]);
 
 });
 
