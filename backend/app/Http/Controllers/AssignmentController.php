@@ -17,4 +17,9 @@ class AssignmentController extends Controller
  
         return response()->json(["result" => "ok"], 201);
     }
+
+    public function viewAssignments()
+    {
+        return response()->json(Assignment::all(), 200);
+    }
 }
