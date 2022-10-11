@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\CourseController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
