@@ -54,6 +54,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'type' => $request->type,
         ]);
 
         $token = Auth::login($user);
@@ -68,6 +69,7 @@ class AuthController extends Controller
         ]);
     }
 
+    
     public function logout()
     {
         Auth::logout();
