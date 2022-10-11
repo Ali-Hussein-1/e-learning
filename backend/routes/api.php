@@ -20,8 +20,9 @@ Route::controller(AuthController::class)->group(function () {
 Route::group(["prefix"=> "v1"], function(){
     Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncement"]);
     Route::get("/viewanncmnt", [AnnouncementController::class, "ViewAnnouncements"]);
-     Route::post("/addassignment", [AssignmentController::class, "AddAssignment"]);
-     Route::get("/viewassignments", [AssignmentController::class, "viewAssignments"]);
+    Route::post("/addassignment", [AssignmentController::class, "AddAssignment"]);
+    Route::get("/viewassignments", [AssignmentController::class, "viewAssignments"]);
+    Route::post("/addcourse", [CourseController::class, "AddCourse"]);
 });
 
 
