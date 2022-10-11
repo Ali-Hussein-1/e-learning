@@ -11,28 +11,28 @@ use App\Http\Controllers\UserController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
-    
     Route::post('logout', 'logout');
     Route::post('refresh', 'refresh');
     Route::get('me', 'me');
     
-
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['middleware' => 'admin.role'], function () {
+        Route::post('/register',[AuthController::class,'register']);
+        Route::post("/addcourse", [CourseController::class, "AddCourse"]);
+    });
+});
+
 
 Route::group(["prefix"=> "v1"], function(){
-    Route::post('/addinstructor',[AuthController::class,'addInstructor']);
-    Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncement"]);
-    Route::get("/viewanncmnt", [AnnouncementController::class, "ViewAnnouncements"]);
-    Route::post("/addassignment", [AssignmentController::class, "AddAssignment"]);
-    Route::get("/viewassignments", [AssignmentController::class, "viewAssignments"]);
-    Route::post("/addcourse", [CourseController::class, "AddCourse"]);
-
+    Route::group(['middleware' => 'instructor.role'], function (){
+        Route::post("/addanncmnt", [AnnouncementController::class, "AddAnnouncement"]);
+        Route::post("/addassignment", [AssignmentController::class, "AddAssignment"]);
+    });
 });
-
-
-// Route::get('/post/{slug}', [PostController::class, 'show']);
-
-// Route::resource('posts', PostController::class)->only([
-//     'destroy', 'show', 'store', 'update'
-//  ]);
+    
+   
+    Route::get("/viewanncmnt", [AnnouncementController::class, "ViewAnnouncements"]);
+    Route::get("/viewassignments", [AssignmentController::class, "viewAssignments"]);
 
