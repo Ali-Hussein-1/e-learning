@@ -2,7 +2,7 @@ import React from "react";
 import SidePanelCards from "./SidePanelCards";
 import Button from "./Button";
 
-const SidePanel = () => {
+const AdminPage = () => {
   return (
     <>
       <div className="container">
@@ -18,9 +18,9 @@ const SidePanel = () => {
             <Button text={"Edit"} />
           </div>
           <div className="info-container">
-            <div>name</div>
-            <div>email</div>
-            <div>password</div>
+            <div>NAME</div>
+            <div>EMAIL</div>
+            <div>PASSWORD</div>
           </div>
         </div>
       </div>
@@ -28,4 +28,4 @@ const SidePanel = () => {
   );
 };
 
-export default SidePanel;
+export default AdminPage;
