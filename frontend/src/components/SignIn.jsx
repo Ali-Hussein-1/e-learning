@@ -8,8 +8,8 @@ const SignIn = () => {
       <div className="signin">
         <div className="signin-container">
           <h1>E-Learning</h1>
-          <Input type={"text"} placeholder={"email"} />
-          <Input type={"passsword"} placeholder={"password"} />
+          <Input placeholder={"email"} />
+          <Input type="password" placeholder={"password"} />
           <Button text={"SignIn"} />
         </div>
       </div>

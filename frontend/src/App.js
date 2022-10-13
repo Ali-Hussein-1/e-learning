@@ -2,7 +2,7 @@ import "./App.css";
 import SignIn from "./components/SignIn";
 import AdminPage from "./components/AdminPage";
 import InstructorPage from "./components/InstructorPage";
-import AddPage from "./components/AddPage";
+import AddUser from "./components/AddUser";
 import EditPage from "./components/EditPage";
 
 
@@ -16,12 +16,12 @@ function App() {
       <div className="App">
         <AdminPage/>
       </div>
-      <div className="App">
+      {/* <div className="App">
         <AddPage/>
-      </div>
-      <div className="App">
-        <EditPage/>
-      </div>
+      </div> */} 
+      {/* <div className="App">
+        <AddUser/>
+      </div> */}
       <div className="App">
         <InstructorPage/>
       </div>

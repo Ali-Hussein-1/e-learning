@@ -7,9 +7,9 @@ const EditPage = () => {
   return (
     <div className="add-container">
       <div>Edit Page</div>
-      <Input type={"text"} placeholder={"name"} />
-      <Input type={"password"} placeholder={"password"} />
-      <Input type={"text"} placeholder={"Instructor or student"} />
+      <Input placeholder={"name"} />
+      <Input placeholder={"password"} />
+      <Input type="password" placeholder={"Instructor or student"} />
       <Button text={"Edit User"} />
     </div>
   );

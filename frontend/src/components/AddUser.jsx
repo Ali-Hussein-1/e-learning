@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Input from "./Input";
 import Button from "./Button";
 
-const AddPage = () => {
+const AddUser = () => {
   return (
     <div className="add-container">
       <div>Add Page</div>
@@ -16,4 +16,4 @@ const AddPage = () => {
   );
 };
 
-export default AddPage;
+export default AddUser;
