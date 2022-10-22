@@ -17,8 +17,10 @@ class Adminmiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+    
         $user = Auth::user();
         if ($user && $user->type == "admin"){
+            
             
         return $next($request);
     }

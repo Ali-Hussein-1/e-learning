@@ -4,6 +4,7 @@ import AdminPage from "./components/AdminPage";
 import InstructorPage from "./components/InstructorPage";
 import AddUser from "./components/AddUser";
 import EditPage from "./components/EditPage";
+import StudentPage from "./components/StudentPage";
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
       </div> */}
       <div className="App">
         <InstructorPage/>
+      </div>
+      <div className="App">
+        <StudentPage/>
       </div>
     </>
   );
